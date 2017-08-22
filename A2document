@@ -1,0 +1,110 @@
+To create component
+  --> ng generate component myFtComponent(name for componante)
+
+To create component
+  --> ng generate service myservicename(name for componante)
+
+For "roting" reference go through this
+  --> https://angular.io/guide/router
+
+Route from controller similer to "$state.go()"
+  --> import { Router }  from '@angular/router';
+  --> this.router.navigate(['/detail']); || this.router.navigate(['/detail', this.selectedHero.id]);
+
+Route through href="/dashboard"
+  --> <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+
+Usage of predefind directive
+  --> *ngIf="selectedHero" , *ngFor="let hero of heroes"
+  --> <p *ngIf ="isTrue; then firstTemp else secondTemp>Hello</p>
+      <ng-template #firstTemp > Tis is first template </ng-template>
+      <ng-template #secondTemp > sssddgefgfg </ng-template>
+
+Events in a2
+  --> (click)="onSelect(hero)"
+
+If u want to applay a class based on condition
+  --> [class.selected]="hero === selectedHero"
+
+Like <ui-view> in a2
+  --> <router-outlet></router-outlet>
+
+D/f ways of writing routes
+  --> const appRoutes: Routes = [
+        { path: 'crisis-center', component: CrisisListComponent },
+        { path: 'hero/:id',      component: HeroDetailComponent },
+        {
+          path: 'heroes',
+          component: HeroListComponent,
+          data: { title: 'Heroes List' }
+        },
+        { path: '',
+          redirectTo: '/heroes',
+          pathMatch: 'full'
+        },
+        { path: '**', component: PageNotFoundComponent }
+      ];
+
+***Import one of the component from rxjs
+  --> import 'rxjs/add/operator/switchMap';
+
+***To change admin permision
+  --> sudo chmod -R 777 /Applications/WebStorm.app/Contents
+
+To read url perameters
+ngOnInit() {
+  this.route.paramMap
+    .switchMap((params: ParamMap) =>
+      this.service.getHero(params.get('id')))
+    .subscribe((hero: Hero) => this.hero = hero);
+}
+
+***Array declaration
+  appList: any[] = [ {
+      "ID": "1",
+      "Name" : "One"
+  },
+  {
+      "ID": "2",
+      "Name" : "Two"
+  } ];
+
+To declare static variables
+  -->static count : number = 0; and usage with class Name ex. StateService.count++;
+
+To make http request through toPromise() method
+  --> import 'rxjs/add/operator/toPromise';
+  --> return this.http.get(this.heroesUrl)
+                   .toPromise()
+                   .then(response => response.json().data as Hero[])
+                   .catch(this.handleError);
+  --> If err occured
+    private handleError(error: any): Promise<any> {
+      console.error('An error occurred', error); // for demo purposes only
+      return Promise.reject(error.message || error);
+    }
+
+To binding on the fly
+  --> <div>
+         <input [value] = "name" (input) = "name = $event.target.value">
+         {{name}}
+      </div>
+
+To transfor state or location from component
+  -->location.href = 'http://localhost:4200/sComponent';
+
+For testing
+  --> .toContain(),.toBe(),.not.toBe(),.toMatch(),
+
+For dynamic Style property binding
+  --> <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus === 'online'}"></p>
+
+Ng4 matereal
+  --> npm install --save @angular/material @angular/animations
+
+To read route params a4
+
+  --> this.sub = this.route.params.subscribe(params => {
+         this.id = +params['id']; // (+) converts string 'id' to a number
+      });
+

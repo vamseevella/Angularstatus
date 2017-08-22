@@ -1,0 +1,18 @@
+<div style="text-align:center; margin-top: 10px;">
+  <!--<p>
+    my-ft-component works {{name}}!
+  </p>-->
+  <div *ngIf = "currentPath;">
+    <h2><a routerLink="/fComponent/sComponent" (click)="onClick()">goToMySecoundComponent</a></h2>
+    <h4>
+      Welcome to {{title}}! <br>
+    </h4>
+    <h2>
+      {{msg}}
+    </h2>
+  </div>
+  <router-outlet></router-outlet>
+
+</div>
+
+
