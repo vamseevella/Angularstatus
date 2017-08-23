@@ -1,5 +1,25 @@
 <div style="text-align:center; margin-top: 40px;">
-  <p>
-    my-sc-component works!
+  <h1>My First Attribute Directive</h1>
+
+  <h4>Pick a highlight color</h4>
+  <div class="radio">
+    <label>
+      <input type="radio" name="colors" (click)="color='lightgreen'">Green
+    </label>
+    <label style="padding-left: 25px">
+      <input type="radio" name="colors" (click)="color='yellow'">Yellow
+    </label>
+    <label style="padding-left: 25px">
+      <input type="radio" name="colors" (click)="color='cyan'">Cyan
+    </label>
+  </div>
+  <p [myHighlight]="color">Highlight me!</p>
+
+  <p [myHighlight]="color" defaultColor="violet">
+    Highlight me too!
   </p>
+</div>
+<div style="text-align:center; margin-top: 40px;">
+  <h4>Example for @Input set() & get()</h4>
+  <name-child *ngFor="let name of names" [name]="name"></name-child>
 </div>

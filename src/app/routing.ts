@@ -7,6 +7,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {MyFtComponentComponent} from './my-ft-component/my-ft-component.component';
 import {MyScComponentComponent} from './my-sc-component/my-sc-component.component';
 import { PersonalComponent } from './personal/personal.component';
+import { VoterComponent } from './voter/voter.component';
+import { CountdownLocalVarParentComponent } from './voter/timer.parent.component';
 
 
 // import { AppComponent }   from './app.component';
@@ -22,6 +24,9 @@ const routes: Routes = [
   },
   // { path: 'sComponent', component: MyScComponentComponent },
   { path: 'pComponent', component: PersonalComponent  },
+  { path: 'voterComponent', component: VoterComponent  },
+  { path: 'timerComponent', component: CountdownLocalVarParentComponent  },
+
 ];
 
 @NgModule({

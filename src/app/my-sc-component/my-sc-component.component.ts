@@ -7,12 +7,16 @@ import { Router }  from '@angular/router';
   styleUrls: ['./my-sc-component.component.css']
 })
 export class MyScComponentComponent implements OnInit {
-  currentPath: boolean;
-  constructor( private router: Router ) { }
+  // currentPath: boolean;
+  color: string;
+  // constructor( private router: Router ) { }
+
+  // Displays 'Mr. IQ', '<no name set>', 'Bombasto'
+  names = ['Mr. IQ', '   ', '  Bombasto  '];
 
   ngOnInit() {
-    this.currentPath = !(this.router.url=="/fComponent/sComponent");
-    console.log( this.currentPath );
+    /*this.currentPath = !(this.router.url=="/fComponent/sComponent");
+    console.log( this.currentPath );*/
   }
 
 }
