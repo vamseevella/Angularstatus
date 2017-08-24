@@ -4,11 +4,12 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
+import { CountdownLocalVarParentComponent } from './voter/timer.parent.component';
 import {MyFtComponentComponent} from './my-ft-component/my-ft-component.component';
 import {MyScComponentComponent} from './my-sc-component/my-sc-component.component';
+import { ObservableComponent } from './observable/observable.component';
 import { PersonalComponent } from './personal/personal.component';
 import { VoterComponent } from './voter/voter.component';
-import { CountdownLocalVarParentComponent } from './voter/timer.parent.component';
 
 
 // import { AppComponent }   from './app.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'pComponent', component: PersonalComponent  },
   { path: 'voterComponent', component: VoterComponent  },
   { path: 'timerComponent', component: CountdownLocalVarParentComponent  },
+  { path: 'observableComponent', component: ObservableComponent  },
 
 ];
 

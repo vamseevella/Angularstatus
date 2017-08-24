@@ -17,6 +17,8 @@ import { MyScComponentComponent } from './my-sc-component/my-sc-component.compon
 import { PersonalComponent } from './personal/personal.component';
 import { VoterComponent } from './voter/voter.component';
 import { VoterChildComponent } from './voter/voter.child.component';
+import { ObservableComponent } from './observable/observable.component';
+import { AstronautComponent } from './observable/astronaut.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { VoterChildComponent } from './voter/voter.child.component';
     PersonalComponent,
     NameChildComponent,
     VoterComponent,
-    VoterChildComponent
+    VoterChildComponent,
+    ObservableComponent,
+    AstronautComponent
   ],
   providers: [ ExampleService ],
   bootstrap: [ AppComponent ]

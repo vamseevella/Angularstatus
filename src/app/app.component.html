@@ -7,16 +7,16 @@
   <div class="row table table-responsive">
     <div class="col-xs-6">
       <table class="table table-condenser col-xs-offset-6">
-        <thead style="background-color: darkturquoise">
-        <th>Id</th>
-        <th>productName</th>
-        <th>clickHere</th>
+        <thead style="background-color: darkturquoise;">
+          <th>Id</th>
+          <th>productName</th>
+          <th>clickHere</th>
         </thead>
         <tbody *ngFor="let prouct of iproducts;">
-        <!--<span> {{prouct.ProductID}} </span> &nbsp; &nbsp;<span> {{prouct.ProductName}} </span>-->
-        <td>{{prouct.ProductID}}</td>
-        <td>{{prouct.ProductName}}</td>
-        <td (click)="doSomeThing(prouct.ProductID)" style="cursor: pointer;">call()</td>
+          <!--<span> {{prouct.ProductID}} </span> &nbsp; &nbsp;<span> {{prouct.ProductName}} </span>-->
+          <td>{{prouct.ProductID}}</td>
+          <td>{{prouct.ProductName}}</td>
+          <td (click)="doSomeThing(prouct.ProductID)" style="cursor: pointer;">call()</td>
         </tbody>
       </table>
     </div>
@@ -26,6 +26,7 @@
     <h2><a routerLink="/pComponent">goToPersonal</a></h2>
     <h2><a routerLink="/voterComponent">goToEmitorsExample</a></h2>
     <h2><a routerLink="/timerComponent">parentChildExample</a></h2>
+    <h2><a routerLink="/observableComponent">observablePCExample</a></h2>
   </div>
 </div>
 <hr style="color: burlywood">
