@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExampleService } from './../service1/example.service';
 
 @Component({
   selector: 'app-personal',
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 
 export class PersonalComponent implements OnInit {
 
-  constructor() { }
+  constructor( public _exampleService: ExampleService ) { }
+  msg: string;
 
   ngOnInit() {
+    this.msg = this._exampleService.getMethod();
+    console.log(this.msg);
   }
 
   // Here we are implementing the submitForm function. All we are doing for right now is spitting out the details of the form to our console.

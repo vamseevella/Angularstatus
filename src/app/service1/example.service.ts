@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 
 export class ExampleService {
-  public str : string;
+  public str : string ="default message";
 
   setMethod ( res ) {
     this.str ='hi '+res ;

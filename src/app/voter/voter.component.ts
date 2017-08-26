@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 
   selector: 'vote-taker',
   template: `
-    <div style="text-align:center; margin-top: 40px;">
+    <div style="text-align:center; margin-top: 40px;padding-bottom: 50px;">
       <h2>Should mankind colonize the Universe?</h2>
       <h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
       <my-voter *ngFor="let voter of voters"

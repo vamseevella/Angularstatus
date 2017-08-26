@@ -17,6 +17,7 @@ export class MyFtComponentComponent implements OnInit {
   ngOnInit() {
     this.title = this._exampleService.someMethod();
     this.msg = this._exampleService.getMethod();
+    this._exampleService.setMethod('setMethod() calling from myFirstComponent ');
     console.log(this.msg);
   }
 

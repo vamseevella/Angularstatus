@@ -19,6 +19,8 @@ import { VoterComponent } from './voter/voter.component';
 import { VoterChildComponent } from './voter/voter.child.component';
 import { ObservableComponent } from './observable/observable.component';
 import { AstronautComponent } from './observable/astronaut.component';
+import { SibligComponent } from './observable/sibling.component';
+import { MissionService }     from './observable/mission.service';
 
 
 @NgModule({
@@ -41,9 +43,10 @@ import { AstronautComponent } from './observable/astronaut.component';
     VoterComponent,
     VoterChildComponent,
     ObservableComponent,
-    AstronautComponent
+    AstronautComponent,
+    SibligComponent
   ],
-  providers: [ ExampleService ],
+  providers: [ ExampleService, MissionService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
