@@ -21,6 +21,8 @@ import { ObservableComponent } from './observable/observable.component';
 import { AstronautComponent } from './observable/astronaut.component';
 import { SibligComponent } from './observable/sibling.component';
 import { MissionService }     from './observable/mission.service';
+import { CalExponentPipe } from './pipe/calexponent.pipe';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { MissionService }     from './observable/mission.service';
     VoterChildComponent,
     ObservableComponent,
     AstronautComponent,
-    SibligComponent
+    SibligComponent,
+    CalExponentPipe,
+    PipeComponent
   ],
   providers: [ ExampleService, MissionService],
   bootstrap: [ AppComponent ]

@@ -1,0 +1,29 @@
+<div style="text-align:center;margin-top:10px;padding-bottom:20px">
+  <div class="container">
+    <div class="row">
+      <h2>calculate 2 Power 10 value</h2>
+      <p>Super power boost: {{2 | calExponent: 10}}</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-defoult">
+        <div class="panel panel-head">
+          <h2>Power Boost Calculator</h2>
+        </div>
+        <div class="col-xs-6">Normal power: <input [(ngModel)]="power"></div>
+        <div class="col-xs-6">Boost factor: <input [(ngModel)]="factor"></div>
+        <div>
+          Super Hero Power: {{power | calExponent: factor}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <h2>Async Hero Message and AsyncPipe</h2>
+      <p>Message: {{ message$ | async }}</p>
+      <button (click)="resend()">Resend</button>
+    </div>
+  </div>
+</div>

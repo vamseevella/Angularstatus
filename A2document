@@ -123,4 +123,24 @@ Subscribe(forEach) ex:-
       /* When we're done */
       subscription.dispose();
 
+--> custome form validation like pan & email validation eztax
+    <form class="example-form">
+      <md-input-container class="example-full-width">
+        <input mdInput placeholder="Email" [formControl]="emailFormControl">
+        <md-error *ngIf="emailFormControl.hasError('pattern')">
+          Please enter a valid email address
+        </md-error>
+        <md-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </md-error>
+      </md-input-container>
+    </form>
 
+--> change color for input-underline & placeholder lable
+    :host /deep/ .mat-input-underline {
+       background-color: #FF0000;    /* replace this color with your accent color hex code */
+    }
+
+   :host /deep/ .mat-input-placeholder {
+       color: #FF0000;
+   }

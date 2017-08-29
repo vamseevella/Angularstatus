@@ -10,6 +10,7 @@ import {MyScComponentComponent} from './my-sc-component/my-sc-component.componen
 import { ObservableComponent } from './observable/observable.component';
 import { PersonalComponent } from './personal/personal.component';
 import { VoterComponent } from './voter/voter.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 // import { AppComponent }   from './app.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'voterComponent', component: VoterComponent  },
   { path: 'timerComponent', component: CountdownLocalVarParentComponent  },
   { path: 'observableComponent', component: ObservableComponent  },
+  { path: 'pipeComponent', component: PipeComponent  },
 
 ];
 
