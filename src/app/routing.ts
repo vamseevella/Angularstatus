@@ -4,13 +4,14 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
-import { CountdownLocalVarParentComponent } from './voter/timer.parent.component';
+import {CountdownLocalVarParentComponent} from './voter/timer.parent.component';
 import {MyFtComponentComponent} from './my-ft-component/my-ft-component.component';
 import {MyScComponentComponent} from './my-sc-component/my-sc-component.component';
-import { ObservableComponent } from './observable/observable.component';
-import { PersonalComponent } from './personal/personal.component';
-import { VoterComponent } from './voter/voter.component';
-import { PipeComponent } from './pipe/pipe.component';
+import {ObservableComponent} from './observable/observable.component';
+import {PersonalComponent} from './personal/personal.component';
+import {VoterComponent} from './voter/voter.component';
+import {PipeComponent} from './pipe/pipe.component';
+import {searchComponent} from './httpObservable/search.component';
 
 
 // import { AppComponent }   from './app.component';
@@ -19,23 +20,25 @@ import { PipeComponent } from './pipe/pipe.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'fComponent', component: MyFtComponentComponent,
+  {
+    path: 'fComponent', component: MyFtComponentComponent,
     children: [
-      { path: 'sComponent', component: MyScComponentComponent },
+      {path: 'sComponent', component: MyScComponentComponent},
     ]
   },
   // { path: 'sComponent', component: MyScComponentComponent },
-  { path: 'pComponent', component: PersonalComponent  },
-  { path: 'voterComponent', component: VoterComponent  },
-  { path: 'timerComponent', component: CountdownLocalVarParentComponent  },
-  { path: 'observableComponent', component: ObservableComponent  },
-  { path: 'pipeComponent', component: PipeComponent  },
+  {path: 'pComponent', component: PersonalComponent},
+  {path: 'voterComponent', component: VoterComponent},
+  {path: 'timerComponent', component: CountdownLocalVarParentComponent},
+  {path: 'observableComponent', component: ObservableComponent},
+  {path: 'pipeComponent', component: PipeComponent},
+  {path: 'searchComponent', component: searchComponent},
 
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule {
 }
