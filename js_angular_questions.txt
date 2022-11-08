@@ -1,0 +1,149 @@
+// Java script
+1. What are the different data types present in javascript?
+2. Explain Hoisting in javascript.
+3. Difference between “==” and “===” operators.
+4. Explain passed by value and passed by reference.
+5. What is an Immediately Invoked Function in javascript?
+6. Explain “this” keyword.
+7. Explain call(), apply() and, bind() methods.
+8. Explain Closures in JavaScript.
+9. What are object prototypes?
+10. What are callbacks?
+11. What is recursion in a programming language?
+12. What is the use of a constructor function in javascript?
+13. What is DOM?
+14. d/f b/w setinterval/settimeout
+15. What are arrow functions?
+16. Differences between declaring variables using var, let and const.
+17. What is the rest parameter and spread operator?
+18. What is the use of promises in javascript?
+19. What are classes in javascript?
+20. What is Object Destructuring?
+
+1. keywords in js ?
+3. what are the functions & d/f types of functions in js ?
+4. what is scope in js. what are d/f types of scopes in js ?
+7. how many ways we can create object in js ?
+8. Object.assign() and Object.entries(), Object.keys(), Object.defineProperties() and different types of object methods in js ?
+9. what is this keyword in js ?
+10. d/f b/w call, applay, bind methods in js ?
+11. spred and rest operators in js ?
+12. what is prototype in js?
+13. what is inheritance in js? how can we achive in js?
+14. what is array and d/f array mehods in js ? indexOf(), lastIndexOf(), 
+    Array.isArray(), instenceof, map(), filter(), reduce(), find(), includes(), splice()?
+15. JSON.stringify(), JSON.parse() methods in js ?
+16. hoisting in js ?
+17. self invoking funtion in js ?
+18. string methods in js ?
+19. set(), map() and it's differencess ?
+20. what is sessionStorage and cookieStorage and d/f in js ?
+21. date object in js, different types of date methods?
+22. d/f b/w setTimeOut() & setIntervel() in js ?
+23. what is window and window methods in js ?
+24. what is document and document methods in js ?
+25. what is simble in js ?
+26. curring in js ?
+27. web workers in js ?
+
+
+-------------  HTMl  ----------------
+1. inline & block level elements in html ?
+2. semantic elements ?
+3. wt is meta tag, and it's uses?
+
+------------- css -------------------
+1. selectors in css, id,class, element selects differencess ?
+2. position properties ?
+3. display properties ?
+4. box model in css ?
+5. box-shadow in css ?
+6. d/f b/w position absolute and relative ?
+7. difference b/w display inline, inline-block, block ?
+8. fallbac in css ?
+9. d/f b/w display: none and visibility: hidden; ?
+10. z-index, float, properties in js ?
+
+1. Js Currying ?
+2. Global objects ?
+3. Event bubling, capturing, stop propagation, syop immidiate propagation, prevent default.?
+doc type?
+position properties?  absolute/relative/static/...?
+meta tags?
+symantic elements ?
+what is diff b/w inline/block , inline-block, flex?
+what is inline/block elements?
+diff b/w height VH,EM ?
+Whsat is observable /subject diff promices/Observable ?
+shadow dom, vertual dom?
+
+
+// Angular
+1 Explain Components, Modules and Services in Angular
+2 What are lifecycle hooks in Angular? Explain a few lifecycle hooks.
+3 Explain interpolation and property binding in Angular.
+4 How are Angular expressions different from JavaScript expressions?
+5 How are observables different from promises?
+6 Angular by default, uses client-side rendering for its applications.
+7 directives in Angular?
+8 How does one share data between components in Angular?
+9. router gaurds?
+10. Http interceptors?
+11. What is AOT compilation? What are the advantages of AOT?
+12. how to debugg angular application?
+
+
+
+1. .a .b, .a.b d/f b/w 
+2. position absolute, relative 
+3. how to achive responsive app
+4. psudo elements in css
+5. make element to center of web page
+6. pure function in javascript
+7. how to emit event ti iframe
+8. event propegation
+9. for loop update single recored with effecting other record
+1o. d/f b/w display inline & inline-block
+11. what is box-sizing: border-box
+12. call, apply, bind
+13. disadvantage of json.stringify & parse() to deep clone
+14. object methods
+15. use of prototypes
+16. preloading stretagies
+18. angular dev tool extention
+19. how to pass data b/w angular component to react component
+20. afterViewInit(), contentInit()
+21. hostListener(), normal event binding
+22. rxjs operators 
+23. d/f change detection strategys and it's methods
+
+
+
+
+
+
+https://operator-atif0005.dlat-qc.devdlt.com/integration-frontend/
+origin + '/integration-frontend/'
+
+
+let n = 5;
+let spaces = '';
+
+// External loop
+for (let i = 0; i < n; i++) {
+  // printing spaces
+  spaces = '';
+  for (let j = 0; j < (n - i); j++) {
+    spaces = spaces + ' ';
+  }
+  
+  // printing stars
+  for (let k = 0; k <= 2 * i; k++) {
+    spaces = spaces + '*';
+  }
+  console.log(spaces);
+  console.log();
+}
+
+
+
