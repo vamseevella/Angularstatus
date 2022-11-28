@@ -1,0 +1,132 @@
+db command- 
+create new db - create database node_test;
+check all dbs- \l;
+to use any db - \c node_test;
+create new table- CREATE TABLE users ( id serial primary key, title varchar(100), description text, isactive boolean);
+
+to check all table in the db - \d;
+
+ connect your postgres db with node js application:
+in DL certiy we are connecting postgres using knex, so first we need to create the connection to connect our db
+1: this functionality is written in dlcer_middleware\dl-dbprovider\implementation\postgres\Connection.js inside connectPostgres(); 
+  const db = knex({
+                client :'pg',
+                connection : {
+                    host:"localhost",
+                    user : "postgres",
+                    database : "node_test",
+                    password : "123456",
+                    port : 5432
+                }
+            });
+            db.raw('SELECT now();').then(
+            (data)=>{
+                console.log('connecting to database');
+                return resolve(db);
+            }, 
+            (err)=>{
+                console.error('error while connecting to database', err);
+                return reject(err);
+            })
+        }); 
+
+2: connect with the postgres
+dlcer_middleware\dl-dbprovider\implementation\postgres\index.js
+async connect() {
+        const connect =  new Connection();
+        this.conn = await connect.connectPostgres();
+        return this.conn;
+    }
+
+3: make the instance of postgres
+dlcer_middleware\dl-dbprovider\index.js
+async connectDB(){
+
+        let postgres = new Postgres();
+        postgres.connectDatabase();
+
+    }
+
+
+4:call the connectdabase in app.js
+  connectDatabase() {
+        let dbFactory = new DbFactory();
+        dbFactory.connectDB();
+    }
+
+
+5. to insert the data in the db 
+	a. with knex
+	     this.dbInstance
+            .into(this.modelName)
+            .insert(data)
+            .returning('*')
+	b. with raw
+		 let query = `insert into ${this.modelName} (name, email,password) values ('${data.name}' , '${data.email}', '${data.password}')`;
+            	return this.dbInstance.raw(query).
+
+
+6. get the data from the db 
+	a.  with knex
+		this.dbInstance.from(this.modelName);
+
+	b.with raw
+		let query = `select * from ${this.modelName}`;
+        	return this.dbInstance.raw(query).
+
+7. get Data with id
+	a. with knex
+		 return this.dbInstance.from(this.modelName)
+        	.where(condition)
+        	.first()
+	b. with raw
+		 let query = `select * from ${this.modelName} where id = ${condition.id};`;
+        	return this.dbInstance.raw(query)
+
+8. update he data in the db
+	a. with knex
+		 return this.dbInstance.table(this.modelName).update(updateData).where(condition)
+	b. with raw
+		 let query = `update ${this.modelName} set email = '${updateData.email}' where id = ${condition.id};`;
+
+            return this.dbInstance.raw(query)
+
+9.delete the data from the db 
+	a. with knex
+	 	return this.dbInstance.from(this.modelName).where(condition).del()
+	b with raw
+		let query = `delete from  ${this.modelName} where id = ${condition.id};`;
+            	return this.dbInstance.raw(query)
+
+10. get data from two table
+	a.with knex
+		return this.dbInstance.select(`${this.modelName}.*`, 'users.name', 'users.email').
+            from(this.modelName)
+            .leftJoin('users',`${this.modelName}.iduser`,'users.id')
+            .where('department',condition.department)
+            .then((resp)=>{
+
+
+10. get data from two table with array value
+	a.with knex
+		return this.dbInstance.select(`${this.modelName}.*`, 'users.name', 'users.email').
+            from(this.modelName)
+            .leftJoin('users',`${this.modelName}.iduser`,'users.id')
+            .where('department',condition.department)
+	    .whereIn('subrole', condition.subrole)
+            .then((resp)=>{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

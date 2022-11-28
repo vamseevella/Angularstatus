@@ -121,11 +121,6 @@ shadow dom, vertual dom?
 
 
 
-
-https://operator-atif0005.dlat-qc.devdlt.com/integration-frontend/
-origin + '/integration-frontend/'
-
-
 let n = 5;
 let spaces = '';
 
@@ -144,6 +139,79 @@ for (let i = 0; i < n; i++) {
   console.log(spaces);
   console.log();
 }
+
+ with \s 'ajh^[a-zA-Z0-9_ぁ-ゖァ-ヺ一-龯〇十百千
+
+
+********** linux commands *************
+
+> netstat -ano | findStr "8080"
+> taskkill /PID <PID> /F
+> tasklist /fi "pid eq 2216"
+
+// Add long paths to git
+> git config --system core.longpaths true
+
+// Search text inside folder
+> grep --exclude-dir={dir1,dir2,*.dst} -rinw '/path/to/somewhere/' -e "pattern"
+
+console.log(1 + "2" + "2"); // 122
+console.log(1 + +"2" + "2"); // 32
+console.log(1 + -"1" + "2"); // 02
+console.log(+"1" + "1" + "2"); // 112
+console.log( "A" - "B" + "2");  // -12;
+console.log( "A" - "B" + 2);  // 1
+
+
+// Given an array\list containing integers, zero is considered an invalid number
+// and the rest of the other numbers are valid. If the two nearest valid numbers are equal
+// then double the value of the right one and make the left one 0.
+// ignore any comparison with zero 万億京兆ーヽヾก-๛áÁéÉíÍóÓúÚñÑüÜ¡¿À-Üà-øoù-ÿŒœ ]*666778',
+
+// At last move all zeros to the right
+
+// Input:
+
+// 2 4 0 0 5 5 5 4 8 0 6 6 8
+
+// Iteration Flow to understand the problem:
+// 2 4 ....
+// 2 4 5....
+// 2 4 5 0 ...
+// 2 4 5 0 0 .....
+// 2 4 0 0 0 10 5...
+// 2 4 0 0 0 10 5 ...
+
+// Final Output Array:
+// 2 4 10 5 4 8 12 8 0 0 0 0 0
+
+
+// let arr = [0, 4, 4, 5, 0, 0, 5, 5, 4, 8, 6, 0, 6, 8];
+// let currentIndex = 0;
+// for (let i = 0; i< arr.length; i++) {
+//     if (arr[i] == 0) {
+//         continue;
+//     }
+//     if (arr[i+1] == 0) {
+//         currentIndex = i+2;
+//         while (arr[currentIndex] == 0) {
+//             currentIndex = currentIndex +1;
+//         }
+        
+//     } else {
+//         currentIndex = i+1;
+//     }
+//     if (arr[i] == arr[currentIndex]) {
+//         arr[i] = 0;
+//         arr[currentIndex] = arr[currentIndex] + arr[currentIndex];
+//         i = currentIndex -1;
+//     }
+// }
+// console.log(arr);
+
+
+
+
 
 
 
